@@ -1,6 +1,6 @@
-# 🇮🇹 Mamamia - Authentic Italian Street Food App
+# Mamamia - Authentic Italian Street Food App
 
-Mamamia adalah aplikasi katalog kuliner Italia modern yang menggabungkan estetika desain klasik "Ristorante" dengan performa teknologi Android terkini. Aplikasi ini dirancang untuk memberikan pengalaman visual yang menggugah selera dengan sentuhan budaya Italia yang kental.
+Mamamia adalah aplikasi katalog kuliner Italia modern yang menggabungkan estetika desain klasik "Ristorante" dengan performa teknologi. Aplikasi ini dirancang untuk memberikan pengalaman visual yang menggugah selera dengan sentuhan budaya Italia yang kental.
 
 ## ✨ Fitur Utama
 
@@ -28,5 +28,8 @@ Aplikasi ini menggunakan elemen desain khusus untuk memperkuat identitas merek:
 - **Typography**: Penggunaan kombinasi font yang memberikan kesan artisan dan tradisional.
 - **Glassmorphism**: Penggunaan kartu semi-transparan (opacity 85-90%) untuk menjaga keterbacaan teks di atas latar belakang bermotif.
 
----
+📸 Tampilan Aplikasi
+
+<img width="1178" height="2498" alt="Detail Produk Screen 1" src="https://github.com/user-attachments/assets/d9f19394-694d-4c41-a39a-41e0d2025f6b" />
+
 *Buon Appetito! Dibuat dengan ❤️ untuk pecinta kuliner Italia.*
