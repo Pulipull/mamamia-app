@@ -29,23 +29,9 @@ Aplikasi ini menggunakan elemen desain khusus untuk memperkuat identitas merek:
 - **Glassmorphism**: Penggunaan kartu semi-transparan (opacity 85-90%) untuk menjaga keterbacaan teks di atas latar belakang bermotif.
 
 📸 Tampilan Aplikasi
-| Halaman Beranda (Home) | Halaman Beranda (Home) |
+
+| Halaman Beranda (Home) 1 | Halaman Beranda (Home) 2 |
 | :---: | :---: |
-| <img src="<img width="500" height="1000" alt="Home Screen 1" src="https://github.com/user-attachments/assets/d47b516e-6435-450c-a1e5-a35d1e4f4990" />
-" width="260" alt="Home Screen"> | <img src="<img width="500" height="1000" alt="Home Screen 2" src="https://github.com/user-attachments/assets/475a0672-b68f-434a-923a-41355dc4daef" />
-" width="260" alt="Home Screen"> |
-
-| Halaman Beranda (Home) | Detail Menu Kuliner |
-| :---: | :---: |
-| <img src="ISI_LINK_FOTO_1_DISINI" width="260" alt="Home Screen"> | <img src="ISI_LINK_FOTO_2_DISINI" width="260" alt="Detail Screen"> |
-
-| Halaman Beranda (Home) | Detail Menu Kuliner |
-| :---: | :---: |
-| <img src="ISI_LINK_FOTO_1_DISINI" width="260" alt="Home Screen"> | <img src="ISI_LINK_FOTO_2_DISINI" width="260" alt="Detail Screen"> |
-
-| Halaman Beranda (Home) |
-| :---: |
-| <img src="ISI_LINK_FOTO_1_DISINI" width="260" alt="Home Screen"> |
-
+| <img src="https://github.com/user-attachments/assets/d47b516e-6435-450c-a1e5-a35d1e4f4990" width="200" alt="Home Screen 1"> | <img src="https://github.com/user-attachments/assets/475a0672-b68f-434a-923a-41355dc4daef" width="200" alt="Home Screen 2"> |
 
 *Buon Appetito! Dibuat dengan ❤️ untuk pecinta kuliner Italia.*
