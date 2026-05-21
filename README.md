@@ -31,9 +31,9 @@ Aplikasi ini menggunakan elemen desain khusus untuk memperkuat identitas merek:
 📸 Tampilan Aplikasi
 | Halaman Beranda (Home) | Halaman Beranda (Home) |
 | :---: | :---: |
-| <img src="<img width="1178" height="2498" alt="Home Screen 1" src="https://github.com/user-attachments/assets/d47b516e-6435-450c-a1e5-a35d1e4f4990" />
-" width="260" alt="Home Screen"> | <img src="<img width="1178" height="2498" alt="Home Screen 2" src="https://github.com/user-attachments/assets/475a0672-b68f-434a-923a-41355dc4daef" />
-" width="260" alt="Home Scree"> |
+| <img src="<img width="500" height="1000" alt="Home Screen 1" src="https://github.com/user-attachments/assets/d47b516e-6435-450c-a1e5-a35d1e4f4990" />
+" width="260" alt="Home Screen"> | <img src="<img width="500" height="1000" alt="Home Screen 2" src="https://github.com/user-attachments/assets/475a0672-b68f-434a-923a-41355dc4daef" />
+" width="260" alt="Home Screen"> |
 
 | Halaman Beranda (Home) | Detail Menu Kuliner |
 | :---: | :---: |
