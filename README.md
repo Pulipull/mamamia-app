@@ -32,11 +32,11 @@ Aplikasi ini menggunakan elemen desain khusus untuk memperkuat identitas merek:
 
 | Home Screen 1 | Home Screen 2 |
 | :---: | :---: |
-| <img src="https://github.com/user-attachments/assets/d47b516e-6435-450c-a1e5-a35d1e4f4990" width="200" alt="Home Screen 1"> | <img src="https://github.com/user-attachments/assets/475a0672-b68f-434a-923a-41355dc4daef" width="200" alt="Home Screen 2"> |
-
-| Profile Screen | Profile Edit Screen |
+| <img src="https://github.com/user-attachments/assets/d47b516e-6435-450c-a1e5-a35d1e4f4990" width="200" alt="Home Screen 1"> | <img src="https://github.com/user-attachments/assets/475a0672-b68f-434a-923a-41355dc4daef" width="200" alt="Home Screen 2"> | | Profile Screen | Profile Edit Screen |
 | :---: | :---: |
 | <img src="https://github.com/user-attachments/assets/5fa49235-7fc0-43fa-9a0d-5e5f4bb7187f" width="200" alt="Profile Screen"> | <img src="https://github.com/user-attachments/assets/ab8579e7-6baf-410f-9a9f-008a8297307a" width="200" alt="Profile Edit Screen"> |
+
+
 
 | Menu Screen 1 | Menu Screen 2 |
 | :---: | :---: |
