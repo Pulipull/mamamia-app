@@ -146,7 +146,7 @@ fun DetailMenuScreen(navController: NavController, menuId: String) {
                 var rating by remember { mutableStateOf(5) }
                 ElevatedCard(
                     modifier = Modifier.fillMaxWidth(),
-                    colors = CardDefaults.elevatedCardColors(containerColor = Color.White),
+                    colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surface),
                     shape = RoundedCornerShape(16.dp)
                 ) {
                     Row(
@@ -193,7 +193,7 @@ fun DetailMenuScreen(navController: NavController, menuId: String) {
                 ElevatedCard(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(16.dp),
-                    colors = CardDefaults.elevatedCardColors(containerColor = Color.White.copy(alpha = 0.85f))
+                    colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surface.copy(alpha = 0.85f))
                 ) {
                     Column(modifier = Modifier.padding(16.dp)) {
                         Text(

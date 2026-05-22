@@ -20,6 +20,10 @@ import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -34,14 +38,15 @@ import androidx.compose.ui.platform.LocalContext
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ProfileScreen(navController: NavController) {
+fun ProfileScreen(navController: NavController, onDarkModeChange: (Boolean) -> Unit = {}) {
     val context = LocalContext.current
-    val repository = ProfileRepository(context)
+    val repository = remember { ProfileRepository(context) }
 
     val name = repository.getRestaurantName()
     val address = repository.getAddress()
     val description = repository.getDescription()
     val openHours = repository.getOpenHours()
+    var isDarkMode by remember { mutableStateOf(repository.isDarkMode()) }
 
     Scaffold(
         containerColor = Color.Transparent,
@@ -121,7 +126,7 @@ fun ProfileScreen(navController: NavController) {
                 ElevatedCard(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(16.dp),
-                    colors = CardDefaults.elevatedCardColors(containerColor = Color.White.copy(alpha = 0.9f))
+                    colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surface.copy(alpha = 0.9f))
                 ) {
                     Column(modifier = Modifier.padding(20.dp)) {
                         ProfileInfoItem(
@@ -130,7 +135,7 @@ fun ProfileScreen(navController: NavController) {
                             content = description
                         )
                         
-                        Divider(modifier = Modifier.padding(vertical = 16.dp), color = Color.LightGray.copy(alpha = 0.5f))
+                        Divider(modifier = Modifier.padding(vertical = 16.dp), color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f))
                         
                         ProfileInfoItem(
                             icon = Icons.Default.LocationOn,
@@ -138,13 +143,45 @@ fun ProfileScreen(navController: NavController) {
                             content = address
                         )
                         
-                        Divider(modifier = Modifier.padding(vertical = 16.dp), color = Color.LightGray.copy(alpha = 0.5f))
+                        Divider(modifier = Modifier.padding(vertical = 16.dp), color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f))
                         
                         ProfileInfoItem(
                             icon = Icons.Default.DateRange,
                             title = "Jam Operasional",
                             content = openHours
                         )
+
+                        Divider(modifier = Modifier.padding(vertical = 16.dp), color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f))
+
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceBetween,
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                Icon(
+                                    imageVector = if (isDarkMode) Icons.Default.Info else Icons.Default.Info, // Placeholder icon
+                                    contentDescription = null,
+                                    tint = MaterialTheme.colorScheme.primary,
+                                    modifier = Modifier.size(24.dp)
+                                )
+                                Spacer(modifier = Modifier.width(16.dp))
+                                Text(
+                                    text = "Mode Gelap",
+                                    style = MaterialTheme.typography.titleSmall,
+                                    color = MaterialTheme.colorScheme.secondary,
+                                    fontWeight = FontWeight.Bold
+                                )
+                            }
+                            Switch(
+                                checked = isDarkMode,
+                                onCheckedChange = {
+                                    isDarkMode = it
+                                    repository.setDarkMode(it)
+                                    onDarkModeChange(it)
+                                }
+                            )
+                        }
                     }
                 }
 

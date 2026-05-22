@@ -28,11 +28,15 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.myapplication.ui.*
 
+import androidx.compose.runtime.*
+import com.example.myapplication.data.ProfileRepository
+import androidx.compose.ui.platform.LocalContext
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         
-        val mamamiaScheme = lightColorScheme(
+        val lightMamamiaScheme = lightColorScheme(
             primary = Color(0xFF008C45), // Italian Green
             onPrimary = Color.White,
             primaryContainer = Color(0xFFE8F5E9), 
@@ -44,8 +48,26 @@ class MainActivity : ComponentActivity() {
             onSurface = Color(0xFF2C1B18) // Dark Coffee Brown
         )
 
+        val darkMamamiaScheme = darkColorScheme(
+            primary = Color(0xFF4CAF50), // Lighter Italian Green for Dark Mode
+            onPrimary = Color.Black,
+            primaryContainer = Color(0xFF003314), 
+            onPrimaryContainer = Color(0xFFC8E6C9),
+            secondary = Color(0xFFE57373), // Softer Italian Red for Dark Mode
+            onSecondary = Color.Black,
+            background = Color(0xFF0F0F0F), // Deep Dark
+            surface = Color(0xFF1A1A1A), // Dark Surface
+            onSurface = Color(0xFFECEFF1), // Near White
+            surfaceVariant = Color(0xFF263238),
+            onSurfaceVariant = Color(0xFFB0BEC5)
+        )
+
         setContent {
-            MaterialTheme(colorScheme = mamamiaScheme) {
+            val context = LocalContext.current
+            val repository = remember { ProfileRepository(context) }
+            var isDarkMode by remember { mutableStateOf(repository.isDarkMode()) }
+
+            MaterialTheme(colorScheme = if (isDarkMode) darkMamamiaScheme else lightMamamiaScheme) {
                 val navController = rememberNavController()
                 val navBackStackEntry by navController.currentBackStackEntryAsState()
                 val currentDestination = navBackStackEntry?.destination
@@ -123,7 +145,12 @@ class MainActivity : ComponentActivity() {
                                 val menuId = backStackEntry.arguments?.getString("menuId") ?: ""
                                 DetailMenuScreen(navController, menuId)
                             }
-                            composable("profile") { ProfileScreen(navController) }
+                            composable("profile") { 
+                                ProfileScreen(
+                                    navController = navController,
+                                    onDarkModeChange = { enabled: Boolean -> isDarkMode = enabled }
+                                ) 
+                            }
                             composable("edit_profile") { EditProfileScreen(navController) }
                         }
                     }
@@ -138,9 +165,9 @@ class MainActivity : ComponentActivity() {
  * Memberikan karakter tanpa mengganggu keterbacaan atau terlihat amatir.
  */
 fun Modifier.italianTexture(): Modifier = this.drawBehind {
-    val step = 32.dp.toPx() // Kotak sedikit lebih rapat
-    val alpha = 0.1f // Level profesional: Terlihat tapi tidak mengganggu teks
-    val strokeWidth = 1.5.dp.toPx() // Kembali ke ketebalan standar
+    val step = 40.dp.toPx() 
+    val alpha = 0.08f 
+    val strokeWidth = 1.5.dp.toPx()
 
     // Garis Vertikal (Hijau Italia)
     var x = 0f
