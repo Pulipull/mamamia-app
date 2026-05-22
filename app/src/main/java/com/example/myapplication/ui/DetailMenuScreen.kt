@@ -143,6 +143,7 @@ fun DetailMenuScreen(navController: NavController, menuId: String) {
                 Spacer(modifier = Modifier.height(24.dp))
                 
                 // Interactive Rating Card
+                var rating by remember { mutableStateOf(5) }
                 ElevatedCard(
                     modifier = Modifier.fillMaxWidth(),
                     colors = CardDefaults.elevatedCardColors(containerColor = Color.White),
@@ -161,15 +162,20 @@ fun DetailMenuScreen(navController: NavController, menuId: String) {
                             )
                             Row(verticalAlignment = Alignment.CenterVertically) {
                                 (1..5).forEach { index ->
-                                    Icon(
-                                        imageVector = Icons.Filled.Star,
-                                        contentDescription = null,
-                                        tint = if (index <= 5) Color(0xFFFFD700) else Color.LightGray,
-                                        modifier = Modifier.size(20.dp)
-                                    )
+                                    IconButton(
+                                        onClick = { rating = index },
+                                        modifier = Modifier.size(32.dp)
+                                    ) {
+                                        Icon(
+                                            imageVector = if (index <= rating) Icons.Filled.Star else Icons.Outlined.Star,
+                                            contentDescription = "Rating $index",
+                                            tint = if (index <= rating) Color(0xFFFFD700) else Color.LightGray,
+                                            modifier = Modifier.size(24.dp)
+                                        )
+                                    }
                                 }
                                 Spacer(modifier = Modifier.width(8.dp))
-                                Text("5.0", fontWeight = FontWeight.Bold)
+                                Text("${rating}.0", fontWeight = FontWeight.Bold)
                             }
                         }
                         
