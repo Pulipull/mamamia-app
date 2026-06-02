@@ -28,6 +28,23 @@ Aplikasi ini menggunakan elemen desain khusus untuk memperkuat identitas merek:
 - **Typography**: Penggunaan kombinasi font yang memberikan kesan artisan dan tradisional.
 - **Glassmorphism**: Penggunaan kartu semi-transparan (opacity 85-90%) untuk menjaga keterbacaan teks di atas latar belakang bermotif.
 
+### 📱 Alur Penggunaan Aplikasi
+
+#### 🏠 Home Screen
+Pengguna pertama kali masuk ke halaman utama yang menampilkan identitas restoran Mamamia, promo spesial, dan akses cepat menuju katalog menu.
+
+#### 🍝 Menu Screen
+Pengguna dapat menjelajahi berbagai hidangan Italia dalam tampilan grid yang modern dan responsif.
+
+#### 🍕 Detail Product
+Setiap menu memiliki halaman detail yang berisi informasi harga, rating, deskripsi, serta cerita singkat mengenai hidangan tersebut.
+
+#### 👤 Profile
+Halaman profil menampilkan informasi restoran seperti lokasi, jam operasional, dan filosofi bisnis.
+
+#### ✏️ Edit Profile
+Memungkinkan pengelola restoran memperbarui informasi profil secara langsung melalui form yang sederhana dan intuitif.
+
 ## 📸 Tampilan Aplikasi
 
 | Home Screen 1 | Home Screen 2 | Profile Screen | Profile Edit Screen |
